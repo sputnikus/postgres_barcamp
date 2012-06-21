@@ -1,9 +1,22 @@
-!SLIDE 
-# My Presentation #
+!SLIDE center
+# PostgreSQL #
+![Postgres](ext/Postgresql_elephant.svg)
 
 !SLIDE bullets incremental
-# Bullet Points #
+# Martin Putniorz #
 
-* first point
-* second point
-* third point
+* Freelance programátor
+* Těžký pythonista
+* Databázový šílenec
+
+!SLIDE bullets incremental
+# Můj život s Postgresem #
+
+* Střední škola
+* Hobby projekty
+* Práce
+
+!SLIDE
+# Nejoblíbenější SQL úložiště#
+
+(moje)

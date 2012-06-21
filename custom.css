@@ -1,0 +1,16 @@
+.underscored {
+    border-bottom: 2px solid #000
+}
+
+.fourcolumn {
+    -webkit-column-count: 4;
+    -webkit-column-gap: 5px;
+    -moz-column-count: 4;
+    -moz-column-gap: 5px;
+    column-count: 4;
+    column-gap: 5px;
+}
+
+.fourcolumn li {
+    font-size: 75%;
+}
