@@ -1,1 +1,8 @@
-{ "name": "My Preso", "sections": [ {"section":"one"} ]}
+{ 
+    "name": "PostgeSQL",
+    "description": "Co jste nechtěli vědět o Postgresu", 
+    "sections": [ 
+        {"section":"stories"},
+        {"section":"cases"}
+    ]
+}
