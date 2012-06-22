@@ -1,4 +1,9 @@
+body {
+    font-family: "Swansea", helvetica
+}
+
 .underscored {
+    padding-bottom: 25px;
     border-bottom: 2px solid #000
 }
 
@@ -15,7 +20,21 @@
     font-size: 75%;
 }
 
+.twocolumn {
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    column-count: 2;
+    column-gap: 20px;
+}
+
 #fireball {
     height: 96%;
     width: 86%;
+}
+
+#sam{
+    height: 95%;
+    width: 65%;
 }
