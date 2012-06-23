@@ -7,5 +7,5 @@
 Nejlepší je zjistit, že na MySQL podporují jen MyISAM
 
 !SLIDE
-# OpenGIS #
+# PostGIS #
 Máte rádi mapy na 4sq?
