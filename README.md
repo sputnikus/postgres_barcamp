@@ -1,0 +1,1 @@
+Slides for my talk about PostgreSQL at Barcamp Brno 2012
